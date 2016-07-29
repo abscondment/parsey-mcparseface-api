@@ -22,8 +22,8 @@ mkdir api
 cd api
 pwd # This is the $BASE referenced below
 git clone https://github.com/tensorflow/tensorflow.git
-git clone https://github.com/dmansfield/models.git
-git clone https://github.com/dmansfield/parsey-mcparseface-api.git
+git clone git@github.com:abscondment/models.git
+git clone git@github.com:abscondment/parsey-mcparseface-api.git
 git clone https://github.com/tensorflow/serving.git
 cd tensorflow
 ./configure
@@ -40,6 +40,7 @@ rm -rf tensorflow tf_models
 ln -s ../tensorflow
 ln -s ../models .
 cd ../parsey-mcparseface-api
+git checkout abscondment-wip
 vi WORKSPACE
 ```
 Now edit the tf_workspace hardcoded path (line 19) to point to the `$BASE/tensorflow` directory. And then you can start the build, which takes about 20 minutes on my system. 
