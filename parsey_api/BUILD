@@ -29,9 +29,7 @@ cc_binary(
         ":parsey_api_proto",
         "@tf_serving//tensorflow_serving/servables/tensorflow:session_bundle_config_proto",
         "@tf_serving//tensorflow_serving/servables/tensorflow:session_bundle_factory",
-        "@tf_serving//tensorflow_serving/session_bundle",
-        "@tf_serving//tensorflow_serving/session_bundle:manifest_proto",
-        "@tf_serving//tensorflow_serving/session_bundle:signature",
+        "@org_tensorflow//tensorflow/contrib/session_bundle",
+        "@org_tensorflow//tensorflow/contrib/session_bundle:signature",
     ],
 )
-
